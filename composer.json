@@ -1,0 +1,23 @@
+{
+    "name": "beck24/admin_pagenotes",
+    "type": "elgg-plugin",
+    "description": "Elgg plugin for an admin to make page-specific notes",
+    "license": "GPL-2.0-only",
+    "keywords": ["elgg", "plugin"],
+    "support": {
+		"source": "https://github.com/beck24/admin_pagenotes",
+		"issues": "https://github.com/beck24/admin_pagenotes/issues"
+	},
+    "authors": [
+        {
+            "name": "Matt Beckett",
+            "email": "matt@mattbeckett.me"
+        }
+    ],
+    "require": {
+ 		"composer/installers": "^1.0.8"
+    },
+	"conflict": {
+		"elgg/elgg": "<3.0"
+	}
+}
