@@ -35,7 +35,10 @@ define(['jquery', 'elgg/Ajax', 'elgg/spinner'], function($, Ajax, spinner) {
             results[v.name] = v.value;
         });
 
-        console.log(results);
+        var $submitButton = $form.find('button.elgg-button-submit');
+
+        $submitButton.attr('disabled', true);
+
 
         ajax.action('admin_pagenotes/edit', {
             data: results
@@ -45,6 +48,16 @@ define(['jquery', 'elgg/Ajax', 'elgg/spinner'], function($, Ajax, spinner) {
             }
 
             $('.admin-pagenotes-list').html(output);
+
+            if (CKEDITOR) {
+                var editorID = $('form.elgg-form-admin-pagenotes-edit textarea').attr('id');
+                CKEDITOR.instances[editorID].setData('');
+            }
+            else {
+                $('form.elgg-form-admin-pagenotes-edit textarea').val('');
+            }
+
+            $submitButton.attr('disabled', false);
         });
     });
 });
