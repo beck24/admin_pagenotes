@@ -3,7 +3,7 @@
 	<id>admin_pagenotes</id>
 	<name>Admin Pagenotes</name>
 	<author>Matt Beckett</author>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<category>admin</category>
 	<description>Elgg plugin for an admin to make page-specific notes</description>
 	<website>http//mattbeckett.me</website>

@@ -22,5 +22,7 @@ class Bootstrap extends DefaultPluginBootstrap {
             'section' => 'administer',
             'context' => 'admin',
         ]);
+
+        elgg_register_plugin_hook_handler('view_vars', 'page/elements/html', __NAMESPACE__ . '\\Hooks::notesJSInjector');
     }
 }

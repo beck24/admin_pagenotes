@@ -17,13 +17,5 @@ return [
 		'admin_pagenotes/edit' => [
 			'access' => 'admin',
 		],
-	],
-
-	'hooks' => [
-		'view_vars' => [
-			'page/elements/html' => [
-				__NAMESPACE__ . '\\Hooks::notesJSInjector' => []
-			]
-		]
 	]
 ];
